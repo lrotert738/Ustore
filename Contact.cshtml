@@ -1,0 +1,159 @@
+﻿@model ustoreV3.UI.MVC.Models.ContactViewModel
+@{
+    ViewBag.Title = "Contact";
+    /*
+     Required components to send and e-mail
+     - Form
+     - ViewModel
+     - HttpGet method
+     - HttpPost method
+     - Confirmation of delivery to the user
+    */
+}
+
+<div class="row">
+    <div class="col=md-12">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div class="text-center alert alert-danger">
+                @ViewBag.ErrorMessage
+            </div>
+        }
+    </div>
+</div>
+
+<div id="contact-page" class="container">
+    <div class="bg">
+        @*<div class="row">
+                <div class="col-sm-12">
+                    <h2 class="title text-center">Contact <strong>Us</strong></h2>
+                    <div id="gmap" class="contact-map google-maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.023561985009!2d-94.61137504846033!3d38.96912997945933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e925e366ed0f%3A0x73aec4617abd2f03!2sCentriq+Training!5e0!3m2!1sen!2sus!4v1468708493385" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>*@
+        <div class="row">
+            <div class="col-md-8" style="margin-bottom:300px;">
+                <div class="contact-form">
+                    <h2 class="title text-center" style="margin-bottom:20px;">Get In Touch</h2>
+                    <div class="status alert alert-success" style="display: none"></div>
+
+                    <!--ol form -->
+                    @*<form id="main-contact-form" class="contact-form row" name="contact-form"
+                              method="get" action="#" onsubmit="validateForm(event)">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Name">
+                                <span id="nameVal" class="invalid"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" name="email" class="form-control" placeholder="Email">
+                                <span id="eMailVal" class="invalid"></span>
+
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" name="subject" class="form-control" placeholder="Subject">
+                                <span id="subjectVal" class="invalid"></span>
+
+                            </div>
+                            <div class="form-group col-md-12">
+                                <textarea name="message" id="message" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
+                                <span id="messageVal" class="invalid"></span>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+                            </div>
+                        </form>*@
+
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group col-md-8">
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Name" })
+
+                            @Html.ValidationMessageFor(x => x.Name)
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", placeholder = "Email" })
+
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            @Html.TextBoxFor(x => x.Subject, new { @class = "form-control", placeholder = "Subject" })
+
+                            @Html.ValidationMessageFor(x => x.Subject)
+
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            @Html.TextAreaFor(x => x.Message, new
+                       {
+                           @class = "form-control",
+                           id = "message",
+                           rows = 8,
+                           placeholder = "Your message here",
+                           title = "Please be concise but make sure to include all important details"
+                       })
+
+                            @Html.ValidationMessageFor(x => x.Message)
+                        </div>
+
+                        <div class="form-group col-md-8">
+                            <input type="submit" name="submit"
+                                   class="btn btn-primary pull-right"
+                                   value="Submit" />
+
+                        </div>
+
+                    }
+                </div>
+            </div>
+            <div class="col-sm-4 bobblehead-contact">
+                <div class="contact-info">
+                    <h2 class="title text-center">Contact Info</h2>
+                    <address>
+                        <p>Bobbleheads-R-Us</p>
+                        <p>115000 Ambassador Dr</p>
+                        <p>Kansas City, MO. 64157</p>
+                        <p>Phone: 816-807-7445</p>
+                        <p>Email: lrotert738@outlook.com</p>
+                    </address>
+                    <ul class="social-nav model-3d-0 footer-social w3_agile_social contactSocial">
+                        <li>
+                            <a href="#" class="facebook">
+                                <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="linkedIn">
+                                <div class="front"><i class="fa fa-linkedin-square" aria-hidden="true"></i></div>
+                                <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    @*<div class="social-networks">*@
+                    @*<h2 class="title text-center">Social Networking</h2>*@
+                    @*<h2>Social Networking</h2>*@
+                    @*<ul>
+                        @*<li><a href="https://www.facebook.com/CentriqTraining/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/CentriqTraining" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/centriq-foss-training" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.youtube.com/user/CentriqTraining" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#https://plus.google.com/108553092060324883743" target="_blank"><i class="fa fa-google-plus"></i></a></li>*@
+                    @*</ul>*@
+                    @*</div>*@
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div><!--/#contact-page-->
+
+
+@section scripts{
+    <script src="~/Scripts/formValidation.js"></script>
+}

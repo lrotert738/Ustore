@@ -1,0 +1,176 @@
+﻿@model ustoreV3.DATA.EF.Product
+
+@{
+    ViewBag.Title = "About";
+}
+
+<div class="about_BblHD">
+    <div class="container">
+        <div class="agile_ab_w3ls_info">
+            <div class="col-md-6 ab_pic_w3ls">
+                <img src="~/Content/Images/Baseball/Salvador_Perez_Royals.jpg" alt=" " class="img-responsive" />
+            </div>
+            <div class="col-md-6 ab_pic_w3ls_text_info">
+                <h5>About Bobbleheads-R-US</h5>
+                <p>Established in 1990 we are the premier buyer and seller of bobbleheads.</p>
+                <p>We have bobbleheads from all sports and many other categories.</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="banner_bottom_agile_info_inner_w3ls" style="margin-bottom:15%;">
+            <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
+                <figure class="effect-roxy">
+                    <img src="~/Content/Images/Baseball/Orbit_Astros.jpg" alt=" " class="img-responsive" />
+                    <figcaption>
+                        @*<h3><span>F</span>all Ahead</h3>*@
+                        <p>New Arrivals</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
+                <figure class="effect-roxy">
+                    <img src="~/Content/Images/Football/Dion_Sanders_Cowboys.jpg" alt=" " class="img-responsive" />
+                    <figcaption>
+                        @*<h3><span>F</span>all Ahead</h3>*@
+                        <p>New Arrivals</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="sale-w3ls">
+    <div class="container">
+        <h6 style="font-family:'Segoe Print'; color:red;">Bobbleheads-R-US</h6>
+        <a class="hvr-outline-out button2" href="@Url.Action("Index", "Products")">Shop Now</a>
+    </div>
+</div>
+
+<div class="coupons larry_coupons">
+    <div class="coupons-grids text-center">
+        <div class="w3layouts_mail_grid">
+            <div class="col-md-3 w3layouts_mail_grid_left">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>FREE SHIPPING</h3>
+                    <p>On all orders over $50.00</p>
+                </div>
+            </div>
+            <div class="col-md-3" style="float:right;">
+                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div class="w3layouts_mail_grid_left2">
+                    <h3>MONEY BACK GUARANTEE</h3>
+                    <p>If not 100% satisfied just return it for your money back minus restocking fee</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+@*<section id="slider">
+    <!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <h1>Houston Astros Mascot - Orbit</h1>
+                                <p>Get one of the funniest looking mascots in the MLB to add to your collection. Price $19.99 </p>
+                                @*<button type="button" onclick="addToCart(1)" class="btn btn-default get">Get it now</button>*@
+                                @*<form action="#" method="post">
+                                    <fieldset>
+                                        <input type="hidden" name="cmd" value="_cart">
+                                        <!--<input type="hidden" name="add" value="1">-->
+                                        <!--<input type="hidden" name="business" value=" ">-->
+                                        <input type="hidden" name="item_name" value="Orbit">
+                                        <input type="hidden" name="amount" value="19.99">
+                                        <!--<input type="hidden" name="discount_amount" value="1.00">-->
+                                        <input type="hidden" name="currency_code" value="USD">
+                                        <!--<input type="hidden" name="return" value=" ">-->
+                                        <!--<input type="hidden" name="cancel_return" value=" ">-->
+                                        <input type="submit" name="submit" value="Add to cart" class="button">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/Content/Images/Baseball/Orbit_Astros.jpg" class="img-responsive" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="item">
+                            <div class="col-sm-6">
+                                <h1>D.C. United</h1>
+                                <p>Every sports fan needs this bobblehead from one of the countries up and coming soccer clubs. Price $15.99</p>
+                                <form action="#" method="post">
+                                    <fieldset>
+                                        <input type="hidden" name="cmd" value="_cart">
+                                        <!--<input type="hidden" name="add" value="1">-->
+                                        <!--<input type="hidden" name="business" value=" ">-->
+                                        <input type="hidden" name="item_name" value="Orbit">
+                                        <input type="hidden" name="amount" value="19.99">
+                                        <!--<input type="hidden" name="discount_amount" value="1.00">-->
+                                        <input type="hidden" name="currency_code" value="USD">
+                                        <!--<input type="hidden" name="return" value=" ">-->
+                                        <!--<input type="hidden" name="cancel_return" value=" ">-->
+                                        <input type="submit" name="submit" value="Add to cart" class="button">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/Content/Images/Soccer/DC_United.jpg" class="book img-responsive" />
+                            </div>
+                        </div>*@
+
+                        @*<div class="item">
+                            <div class="col-sm-6">
+                                <h1>Robert Parish - Boston Celtics</h1>
+                                <p>In the NBA glory days when Magic Johnson, Kevin McHale, Larry Bird were feared on the court, Robert Parish, the "Chief", went about his business and was a key component to the Celtics domination in the NBA. Price $34.99 </p>
+                                <form action="#" method="post">
+                                    <fieldset>
+                                        <input type="hidden" name="cmd" value="_cart">
+                                        <!--<input type="hidden" name="add" value="1">-->
+                                        <!--<input type="hidden" name="business" value=" ">-->
+                                        <input type="hidden" name="item_name" value="Orbit">
+                                        <input type="hidden" name="amount" value="19.99">
+                                        <!--<input type="hidden" name="discount_amount" value="1.00">-->
+                                        <input type="hidden" name="currency_code" value="USD">
+                                        <!--<input type="hidden" name="return" value=" ">-->
+                                        <!--<input type="hidden" name="cancel_return" value=" ">-->
+                                        <input type="submit" name="submit" value="Add to cart" class="button">
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/Content/Images/Basketball/Robert Parish Celtics.jpg" class="book img-responsive" />
+                            </div>
+                        </div>*@
+                    @*</div>
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>*@  <!--/slider-->
